@@ -1,9 +1,20 @@
 syntax = "proto2";
-option java_package = "protobuf.test";
+option java_package = "pbuf.test";
 option java_outer_classname = "Test";
 message Person {
     required int32  id    = 1;
     required string name  = 2;
     optional string email = 3;
     repeated string likes = 4;
+}
+
+message Request {
+    required string action = 1;
+    optional Person person = 2;
+}
+
+message Response {
+    required string action = 1;
+    required string result = 2;
+    optional Person person = 3;
 }

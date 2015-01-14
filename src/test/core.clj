@@ -11,7 +11,7 @@
   [& args]
   (println "Hello, World!")
 
-  ;(b/-main)
+  (b/-main)
   ;(future (w/-main))
   ;(c/-main)
   )

@@ -7,6 +7,7 @@
                  [org.clojure/clojure "1.5.1"]
                  [org.flatland/protobuf "0.8.1"]
                  [org.zeromq/cljzmq "0.1.4"]
+                 [com.taoensso/carmine "2.9.0"]
                  ]
   :plugins [[lein-protobuf "0.4.1"]]
   :main ^:skip-aot test.core
