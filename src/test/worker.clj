@@ -27,10 +27,10 @@
                 response (protobuf Response :action (:action request)
                                    :result (case (:action request)
                                              "get" "OK"
-                                             "set" (wcar* (car/hmset* "person" (:person request)))
+                                             "set" (wcar* (car/set :pKey (:person request)))
                                              "Wrong action")
                                    :person (case (:action request)
-                                             "get" (wcar* (car/hgetall "person"))
+                                             "get" (wcar* (car/get :pKey))
                                              nil))]
             (println response)
             (Thread/sleep 10)
